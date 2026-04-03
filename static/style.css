@@ -1,0 +1,372 @@
+/* استيراد خط تجول العربي */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+:root {
+    --primary: #2c3e50;
+    --secondary: #27ae60;
+    --light-bg: #f0f2f5;
+    --white: #ffffff;
+    --shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: var(--light-bg);
+    direction: rtl;
+    color: #333;
+}
+
+/* الهيدر مع تدرج لوني */
+header {
+    background: linear-gradient(135deg, var(--primary) 0%, #1a252f 100%);
+    color: var(--white);
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+header h1 span { color: var(--secondary); }
+
+/* القائمة الأنيقة */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 15px;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #bdc3c7;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover { color: var(--secondary); }
+
+/* صندوق النموذج المستوحى من التطبيقات الحديثة */
+.form-card {
+    background: var(--white);
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-header i {
+    font-size: 3rem;
+    color: var(--secondary);
+    margin-bottom: 10px;
+}
+
+/* تنسيق حقول الإدخال مع الأيقونات */
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #95a5a6;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px 45px 15px 15px; /* مساحة للأيقونة على اليمين */
+    border: 2px solid #ecf0f1;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: 'Tajawal', sans-serif;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: var(--secondary);
+    outline: none;
+}
+
+/* زر الإرسال بتأثير النبض عند التمرير */
+.submit-btn {
+    width: 100%;
+    padding: 18px;
+    background: var(--secondary);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.submit-btn:hover {
+    background: #219150;
+    transform: scale(1.02);
+}
+/* خلفية متحركة هادئة */
+body {
+    background: linear-gradient(-45deg, #f0f2f5, #e1e5ea, #ffffff);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* تنسيق نافذة النجاح (Sweet Alert Style) */
+.modal-overlay {
+    display: none; /* مخفية افتراضياً */
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 400px;
+    animation: popIn 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@keyframes popIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.modal-content i {
+    font-size: 4rem;
+    color: var(--secondary);
+    margin-bottom: 20px;
+}
+
+.modal-btn {
+    margin-top: 20px;
+    padding: 10px 30px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+/* تنسيق القائمة المنسدلة */
+nav ul li { position: relative; }
+
+.submenu {
+    display: none; /* مخفية */
+    position: absolute;
+    background: var(--white);
+    min-width: 200px;
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+    top: 100%;
+    right: 0;
+    z-index: 1000;
+}
+
+.submenu li { width: 100%; text-align: right; }
+.submenu li a {
+    color: var(--primary) !important;
+    padding: 10px 15px;
+    display: block;
+    border-bottom: 1px solid #eee;
+}
+
+nav ul li:hover .submenu {
+    display: block; /* تظهر عند التمرير */
+}
+
+.submenu li a:hover {
+    background-color: #f8f9fa;
+    color: var(--secondary) !important;
+}
+/* تنسيقات لوحة الإدارة */
+.admin-container {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.data-table th, .data-table td {
+    padding: 15px;
+    text-align: right;
+    border-bottom: 1px solid #eee;
+}
+
+.data-table th {
+    background-color: var(--primary);
+    color: white;
+}
+
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    background: #e1e5ea;
+}
+
+.btn-delete {
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-delete:hover {
+    color: #c0392b;
+}
+/* تأكد من أن القائمة المنسدلة تبدأ تماماً من حيث ينتهي الزر */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* تجعلها تبدأ مباشرة تحت النص */
+    right: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1000;
+    border-radius: 8px;
+    
+    /* هذا هو السر: إضافة مساحة شفافة علوية لتعمل كجسر */
+    padding-top: 10px; 
+    margin-top: -5px; /* يرفع القائمة قليلاً لتتداخل مع منطقة الزر */
+}
+
+/* لجعل القائمة تظهر عند الحوم على العنصر الأب بالكامل */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+/* اجعل العنصر الأب "Position Relative" ليكون مرجعاً للقائمة */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* تنسيق القائمة المنسدلة */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* تظهر مباشرة تحت كلمة الأقسام */
+    left: 0;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+    z-index: 1000;
+    border-radius: 8px;
+    padding: 10px 0;
+    /* الجسر الشفاف لمنع الاختفاء */
+    border-top: 10px solid transparent; 
+    margin-top: -10px;
+}
+
+/* إظهار القائمة عند وضع الماوس على "الأقسام" */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* تنسيق الروابط داخل القائمة */
+.dropdown-menu a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: right; /* لتناسب اللغة العربية */
+    transition: 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f1f1f1;
+    color: #2ecc71; /* لون التمييز الأخضر */
+}
+/* حاوية الشريط */
+.ticker-container {
+    display: flex;
+    background: #1a1a1a;
+    color: white;
+    overflow: hidden;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    direction: rtl; /* للغة العربية */
+}
+
+/* عنوان الشريط الثابت */
+.ticker-title {
+    background: #2ecc71;
+    padding: 0 20px;
+    font-weight: bold;
+    z-index: 2;
+    white-space: nowrap;
+}
+
+/* الجزء المتحرك */
+.ticker-content {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.ticker-items {
+    display: flex;
+    position: absolute;
+    white-space: nowrap;
+    animation: ticker-move 20s linear infinite;
+}
+
+.ticker-items span {
+    padding: 0 40px;
+    font-size: 0.9rem;
+}
+
+.up { color: #2ecc71; margin-right: 5px; }
+.down { color: #e74c3c; margin-right: 5px; }
+
+/* حركة التمرير */
+@keyframes ticker-move {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* توقف الحركة عند وضع الماوس */
+.ticker-container:hover .ticker-items {
+    animation-play-state: paused;
+}

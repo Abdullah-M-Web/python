@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>أخبار المساعدات</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>آخر <span>المستجدات</span></h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">الرئيسية</a></li>
+                <li><a href="{{ url_for('register') }}">تقديم طلب</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container" style="max-width: 800px; margin: 40px auto; padding: 20px;">
+        <div class="form-card" style="margin-bottom: 20px;">
+            <h3><i class="fas fa-bullhorn" style="color: #e67e22;"></i> تنبيه هام للمسجلين</h3>
+            <p>نرجو من الجميع التأكد من أن أرقام الهواتف المدخلة تدعم تطبيق الواتساب لتسهيل عملية التواصل السريع.</p>
+        </div>
+
+        <div class="form-card">
+            <h3><i class="fas fa-calendar-check" style="color: var(--secondary);"></i> خطة توزيع شهر مارس 2026</h3>
+            <p>بدأت لجان التوزيع اليوم في تسليم السلال الغذائية للمستفيدين من الفئة "أ". يرجى انتظار رسالة نصية لتحديد موعد الاستلام.</p>
+            <hr style="margin: 20px 0; opacity: 0.2;">
+            <h3><i class="fas fa-notes-medical" style="color: #e74c3c;"></i> قسم المساعدات الطبية</h3>
+            <p>تم توفير كمية جديدة من أدوية الأمراض المزمنة. يمكنكم تحديث طلباتكم عبر اختيار "طبية" في نموذج التسجيل.</p>
+        </div>
+    </div>
+</body>
+</html>

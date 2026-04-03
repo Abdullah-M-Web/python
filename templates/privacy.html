@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>سياسة الخصوصية</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>سياسة <span>الخصوصية</span></h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">الرئيسية</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container" style="max-width: 700px; margin: 50px auto;">
+        <div class="form-card">
+            <h2><i class="fas fa-shield-alt" style="color: var(--primary);"></i> حماية بياناتك</h2>
+            <p>نحن نلتزم بحماية كافة المعلومات التي تقدمها لنا:</p>
+            <ul style="padding-right: 20px; margin-top: 15px;">
+                <li style="margin-bottom: 10px;">يتم استخدام اسمك ورقم هاتفك لغرض التنسيق الإنساني فقط.</li>
+                <li style="margin-bottom: 10px;">لا يتم بيع أو مشاركة بياناتك مع أي جهات تجارية خارجية.</li>
+                <li style="margin-bottom: 10px;">يتم تخزين البيانات في قاعدة بيانات مشفرة ومحمية.</li>
+            </ul>
+            <p style="margin-top: 20px; font-weight: bold; color: var(--secondary);">بإرسالك للطلب، أنت توافق على معالجة بياناتك لهذا الغرض.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بوابة التعليم - منصة المتقدمون</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* تنسيقات خاصة بصفحة التعليم لتشبه المواقع الإخبارية التعليمية */
+        .edu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .edu-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            border: 1px solid #eee;
+        }
+        .edu-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .edu-card .card-header {
+            padding: 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .edu-card .card-body {
+            padding: 20px;
+        }
+        .edu-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .edu-card ul li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #ddd;
+        }
+        .edu-card ul li a {
+            text-decoration: none;
+            color: #444;
+            display: flex;
+            justify-content: space-between;
+            transition: 0.2s;
+        }
+        .edu-card ul li a:hover {
+            color: var(--secondary);
+            padding-right: 5px;
+        }
+        .badge-new {
+            background: #e74c3c;
+            color: white;
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>ركن <span>التعليم</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">الرئيسية</a></li>
+                    <li><a href="{{ url_for('register') }}">المساعدات</a></li>
+                    <li><a href="{{ url_for('jobs') }}">الوظائف والمنح</a></li>
+                    <li><a href="{{ url_for('article') }}">الأخبار</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="form-card" style="border-right: 8px solid #e74c3c; background: #fff5f5;">
+            <h2 style="text-align: right;"><i class="fas fa-star" style="color: #f1c40f;"></i> قسم الثانوية العامة (توجيهي)</h2>
+            <p>كل ما يلزم طالب التوجيهي من ملازم، اختبارات نهائية، وشروحات مصورة لجميع الفروع.</p>
+            <div style="margin-top: 15px;">
+                <a href="#" class="submit-btn" style="width: auto; display: inline-block; background: #e74c3c;">تصفح مواد التوجيهي 2026</a>
+            </div>
+        </div>
+
+        <div class="edu-grid">
+            
+            <div class="edu-card">
+                <div class="card-header" style="background: #3498db;">
+                    <i class="fas fa-school fa-2x"></i>
+                    <h3>التعليم المدرسي</h3>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><a href="#">المرحلة الابتدائية <span><i class="fas fa-chevron-left"></i></span></a></li>
+                        <li><a href="#">المرحلة الإعدادية <span><i class="fas fa-chevron-left"></i></span></a></li>
+                        <li><a href="#">المرحلة الثانوية <span><i class="fas fa-chevron-left"></i></span></a></li>
+                        <li><a href="#">التحضيرات المدرسية <span class="badge-new">جديد</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="edu-card">
+                <div class="card-header" style="background: #27ae60;">
+                    <i class="fas fa-user-graduate fa-2x"></i>
+                    <h3>ركن الخريجين</h3>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><a href="#">نماذج امتحانات التوظيف <span><i class="fas fa-chevron-left"></i></span></a></li>
+                        <li><a href="#">مواد تدريبية تخصصية <span><i class="fas fa-chevron-left"></i></span></a></li>
+                        <li><a href="#">دورات تأهيل الخريجين <span><i class="fas fa-chevron-left"></i></span></a></li>
+                        <li><a href="#">منح الدراسات العليا <span class="badge-new">مهم</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="edu-card">
+                <div class="card-header" style="background: #9b59b6;">
+                    <i class="fas fa-book-reader fa-2x"></i>
+                    <h3>الصحة والأسرة</h3>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><a href="#">مقالات تربوية للأهالي <span><i class="fas fa-chevron-left"></i></span></a></li>
+                        <li><a href="#">التوجيه النفسي للطلاب <span><i class="fas fa-chevron-left"></i></span></a></li>
+                        <li><a href="#">التغذية السليمة <span><i class="fas fa-chevron-left"></i></span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 40px; display: flex; gap: 20px; flex-wrap: wrap;">
+            <div class="form-card" style="flex: 1; min-width: 250px;">
+                <h4><i class="fas fa-chart-line"></i> حالة الاقتصاد</h4>
+                <p>متابعة أسعار العملات والذهب والسلع الأساسية يومياً.</p>
+            </div>
+            <div class="form-card" style="flex: 1; min-width: 250px;">
+                <h4><i class="fas fa-cloud-sun-rain"></i> حالة الطقس</h4>
+                <p>درجات الحرارة المتوقعة للأيام الثلاثة القادمة.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 40px 0; color: #777;">
+        <p>© 2026 جميع الحقوق محفوظة - بوابة التعليم والتمكين</p>
+    </footer>
+
+</body>
+</html>

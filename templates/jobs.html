@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>بوابة الوظائف</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>فرص <span>العمل</span></h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">الرئيسية</a></li>
+                <li><a href="{{ url_for('jobs') }}">الوظائف</a></li>
+                <li><a href="{{ url_for('education') }}">التعليم</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="form-card">
+            <h2 style="text-align: right;"><i class="fas fa-briefcase"></i> أحدث الوظائف المتاحة</h2>
+            
+            <div style="border-right: 4px solid var(--secondary); padding: 15px; margin-bottom: 20px; background: #f9f9f9;">
+                <h4>مدخل بيانات - عن بُعد</h4>
+                <p style="font-size: 0.9rem; color: #666;">تاريخ النشر: مارس 2026</p>
+                <button class="submit-btn" style="width: auto; padding: 5px 15px; font-size: 0.9rem;">عرض التفاصيل</button>
+            </div>
+
+            <div style="border-right: 4px solid var(--primary); padding: 15px; margin-bottom: 20px; background: #f9f9f9;">
+                <h4>مندوب توصيل - منطقة (أ)</h4>
+                <p style="font-size: 0.9rem; color: #666;">تطلب الشركة موظفين بدوام كامل مع توفير وسيلة النقل.</p>
+                <button class="submit-btn" style="width: auto; padding: 5px 15px; font-size: 0.9rem;">عرض التفاصيل</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
